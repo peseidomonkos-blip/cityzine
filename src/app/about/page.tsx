@@ -17,7 +17,7 @@ export default function AboutPage() {
       <main className="flex-1 pt-20 md:pt-24">
         <BrandStory />
 
-        <Marquee className="my-8">
+        <Marquee className="my-8" repeat={20}>
           <span className="text-editorial text-gray text-xs font-black">CITYZINE</span>
           <span className="text-gray">&bull;</span>
         </Marquee>

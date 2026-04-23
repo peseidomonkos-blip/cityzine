@@ -28,7 +28,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <Marquee>
+        <Marquee repeat={20}>
           <span className="text-editorial text-gray text-xs">Street Culture</span>
           <span className="text-gray">&bull;</span>
           <span className="text-editorial text-gray text-xs">Print</span>
