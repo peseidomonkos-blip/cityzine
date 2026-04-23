@@ -29,17 +29,8 @@ export default function HomePage() {
         </div>
 
         <Marquee repeat={20}>
-          <span className="text-editorial text-gray text-xs">Street Culture</span>
+          <span className="text-editorial text-gray text-xs font-black">CITYZINE</span>
           <span className="text-gray">&bull;</span>
-          <span className="text-editorial text-gray text-xs">Print</span>
-          <span className="text-gray">&bull;</span>
-          <span className="text-editorial text-gray text-xs">Apparel</span>
-          <span className="text-gray">&bull;</span>
-          <span className="text-editorial text-gray text-xs">Est. 2025</span>
-          <span className="text-gray">&bull;</span>
-          <span className="text-editorial text-gray text-xs">Independent</span>
-          <span className="text-gray">&bull;</span>
-          <span className="text-editorial text-gray text-xs">city-zine.eu</span>
         </Marquee>
         <FeaturedZines />
         <BrandIntro />
