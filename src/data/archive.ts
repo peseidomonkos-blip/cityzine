@@ -32,7 +32,7 @@ export const zineArchive: ZineItem[] = [
     description:
       'The first issue. Photographed by Gránásy Gergely and Benczédi Benedek. Street photography, urban documentation.',
     pageCount: 34,
-    pdfUrl: '/archive/vol-01.pdf',
+    pdfUrl: 'https://wagv8hvkndth0ocv.public.blob.vercel-storage.com/vol-01.pdf',
     coverImage: '/archive/covers/cover-vol-01.jpg',
   },
   {
@@ -44,7 +44,7 @@ export const zineArchive: ZineItem[] = [
     description:
       'The second issue. Turn in the direction of becoming something more community based.',
     pageCount: 40,
-    pdfUrl: '/archive/vol-02.pdf',
+    pdfUrl: 'https://wagv8hvkndth0ocv.public.blob.vercel-storage.com/vol-02.pdf',
     coverImage: '/archive/covers/cover-vol-02.jpg',
   },
   {
@@ -56,7 +56,7 @@ export const zineArchive: ZineItem[] = [
     description:
       'The third issue, now available for everyone to send in pictures.',
     pageCount: 45,
-    pdfUrl: '/archive/vol-03.pdf',
+    pdfUrl: 'https://wagv8hvkndth0ocv.public.blob.vercel-storage.com/vol-03.pdf',
     coverImage: '/archive/covers/cover-vol-03.jpg',
   },
   {
@@ -68,7 +68,7 @@ export const zineArchive: ZineItem[] = [
     description:
       'The fourth issue. 17 photographers. Photos from all around the world.',
     pageCount: 44,
-    pdfUrl: '/archive/vol-04.pdf',
+    pdfUrl: 'https://wagv8hvkndth0ocv.public.blob.vercel-storage.com/vol-04.pdf',
     coverImage: '/archive/covers/cover-vol-04.png',
     pdfPageScale: 1.41422, // PDF exported at A3, photos fill A4 area (top-left ~70.7%)
   },
