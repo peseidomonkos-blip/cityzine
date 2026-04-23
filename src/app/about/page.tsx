@@ -18,21 +18,8 @@ export default function AboutPage() {
         <BrandStory />
 
         <Marquee className="my-8">
-          <span className="text-editorial text-gray text-xs">
-            Print the City
-          </span>
+          <span className="text-editorial text-gray text-xs font-black">CITYZINE</span>
           <span className="text-gray">&bull;</span>
-          <span className="text-editorial text-gray text-xs">
-            Wear the Culture
-          </span>
-          <span className="text-gray">&bull;</span>
-          <span className="text-editorial text-gray text-xs">
-            Document Everything
-          </span>
-          <span className="text-gray">&bull;</span>
-          <span className="text-editorial text-gray text-xs">
-            Stay Independent
-          </span>
         </Marquee>
       </main>
       <Footer />
