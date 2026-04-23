@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ── Surfaces (warm light earth palette) ── */
+  --color-black: #F2EDE6;       /* main bg: warm beige */
+  --color-charcoal: #EAE3D9;    /* secondary surface */
+  --color-concrete: #DDD7CD;    /* card / placeholder bg */
+  --color-asphalt: #C5BDB0;     /* borders / dividers */
+  --color-smoke: #A89E92;       /* subdued elements */
+  --color-offwhite: #F5F0EB;    /* lightest accent bg */
+  --color-cream: #E8E2DA;       /* cream */
+  --color-ink: #1C1914;         /* permanent dark — use on accent bg */
+
+  /* ── Accent ── */
+  --color-toxic: #1C1914;       /* repurposed: ink-dark, used for primary interactive states */
+  --color-toxic-dim: #1C191410;
+  --color-spray: #4A90D9;
+  --color-blood: #C23B22;
+
+  /* ── Text (dark for light bg) ── */
+  --color-white: #1C1914;       /* primary text: warm near-black */
+  --color-gray: #5C5249;        /* secondary text */
+  --color-muted: #9C9489;       /* muted text */
+
+  /* ── Fonts ── */
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+  --font-brand: var(--font-barlow);
+
+  /* ── Easing ── */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ── Animations ── */
+  --animate-fade-up: fade-up 0.6s var(--ease-smooth) both;
+  --animate-fade-in: fade-in 0.5s var(--ease-smooth) both;
+  --animate-slide-up: slide-up 0.8s var(--ease-out-expo) both;
+  --animate-marquee: marquee 40s linear infinite;
+}
+
+/* ── Keyframes ── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── Base ── */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-asphalt) var(--color-black);
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-asphalt);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-smoke);
+}
+
+/* ── Grain Overlay ── */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url('/noise.svg');
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* ── Image Grain ── */
+.image-grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/noise.svg');
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0.07;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* ── Typography helpers ── */
+.text-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+}
+
+.text-editorial {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+/* ── Focus styles ── */
+*:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
