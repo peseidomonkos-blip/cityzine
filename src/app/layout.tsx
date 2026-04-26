@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import { spaceGrotesk, inter, barlow } from '@/lib/fonts';
 import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
